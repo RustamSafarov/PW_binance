@@ -58,4 +58,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Allure Report
+<<<<<<< HEAD
           path: allure-report
+=======
+          path: allure-report
+>>>>>>> 722a1c2e040ca93c033ace5debc6177c3c44ec5a
