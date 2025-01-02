@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from playwright.sync_api import Page
 from config import Authorization, API_KEY
 import pytest

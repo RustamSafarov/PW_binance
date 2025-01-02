@@ -19,26 +19,4 @@ class TestPetstore:
     def test_petstore(self, page: Page):
         page.goto("https://petstore.swagger.io/")
         page.get_by_role("link", name="Petstore API")
-=======
-from playwright.sync_api import Page
-from ..config.authorization import Authorization
-import pytest
-from config import USERNAME, PASSWORD
-
-class TestPetstore:
-    def __init__(self, page: Page):
-        self.page = page
-        self.petstore_api = PetstoreAPI()
-        self.auth = Authorization()
-
-    @pytest.fixture(autouse=True)
-    def setup_authentication(self):
-        # Выполняем авторизацию перед запуском тестов
-        login_response = self.auth.login_user(USERNAME, PASSWORD)
-        assert login_response.get("code") == 200
-
-    def test_petstore(self, page: Page):
-        page.goto("https://petstore.swagger.io/")
-        page.get_by_role("link", name="Petstore API")
->>>>>>> 722a1c2e040ca93c033ace5debc6177c3c44ec5a
         # Авторизация выполнена автоматически через фикстуру
