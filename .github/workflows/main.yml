@@ -1,5 +1,6 @@
 name: Nightly Test Run
 
+# Запускать workflow каждый день в 21:00 UTC (что соответствует 00:00 MSK)
 on:
   schedule:
     - cron: '0 21 * * *'  # Каждый день в 21:00 UTC
@@ -58,8 +59,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Allure Report
-<<<<<<< HEAD
           path: allure-report
-=======
-          path: allure-report
->>>>>>> 722a1c2e040ca93c033ace5debc6177c3c44ec5a
