@@ -1,6 +1,6 @@
 import pytest
-from pw_pets.config import Authorization, API_KEY, USERNAME, PASSWORD
-from PW_pets.modules.API.meths import PetstoreClient
+from config import Authorization, API_KEY, USERNAME, PASSWORD
+from modules.API.meths import PetstoreClient
 
 @pytest.fixture(scope="function")
 def petstore_client():

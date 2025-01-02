@@ -1,5 +1,5 @@
 import pytest
-from pw_pets.config import Authorization, API_KEY, USERNAME, PASSWORD
+from config import Authorization, API_KEY, USERNAME, PASSWORD
 
 @pytest.fixture(scope="session")
 def auth_client():

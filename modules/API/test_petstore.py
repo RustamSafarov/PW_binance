@@ -1,8 +1,8 @@
 from playwright.sync_api import Page
-from pw_pets.config import Authorization, API_KEY
+from config import Authorization, API_KEY
 import pytest
-from pw_pets.config import USERNAME, PASSWORD
-from PW_binance.modules.API.meths import PetstoreClient
+from config import USERNAME, PASSWORD
+from modules.API.meths import PetstoreClient
 import uuid
 
 @pytest.mark.smoke
