@@ -30,12 +30,19 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
+**На macOS и Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
 ### 3. Установка зависимостей
 
 Убедитесь, что вы находитесь в активированном виртуальном окружении, затем установите необходимые пакеты:
 
 ```bash
-pip install -r requirements.txt
+pip install -r pw_pets/requirements.txt
 ```
 
 ### 4. Настройка переменных окружения
@@ -47,7 +54,9 @@ pip install -r requirements.txt
 ### 5. Запуск тестов
 
 Используйте **Pytest** для выполнения тестов. Для параллельного запуска тестов с использованием `pytest-xdist` выполните следующую команду:
+
 ```bash
+cd pw_pets
 pytest -n auto --alluredir=allure-results
 ```
 
@@ -95,13 +104,13 @@ allure open allure-report
 
 ## Структура проекта
 
-- `config.py`: файл для хранения конфигурационных данных.
-- `modules/API/meths.py`: файл с методами для работы с API.
-- `modules/API/test_petstore.py`: файл с тестами для API.
-- `modules/API/conftest.py`: файл с фикстурами для тестов.
-- `requirements.txt`: файл с зависимостями проекта.
-- `pytest.ini`: файл с настройками для pytest.
-- `allure.json`: файл с настройками для Allure.
+- `pw_pets/`: основная директория проекта.
+  - `modules/API/meths.py`: файл с методами для работы с API.
+  - `modules/API/test_petstore.py`: файл с тестами для API.
+  - `modules/API/conftest.py`: файл с фикстурами для тестов.
+  - `requirements.txt`: файл с зависимостями проекта.
+  - `pytest.ini`: файл с настройками для pytest.
+- `.github/workflows/main.yml`: конфигурация GitHub Actions для CI/CD.
 
 ## Используемые технологии и инструменты
 
