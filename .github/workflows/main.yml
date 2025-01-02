@@ -1,12 +1,11 @@
 name: Nightly Test Run
 
-# Запускать workflow каждый день в 21:00 UTC (что соответствует 00:00 MSK)
 on:
   schedule:
     - cron: '0 21 * * *'  # Каждый день в 21:00 UTC
   push:
     branches:
-      - main  # Замените на вашу главную ветку, если отличается
+      - main
 
 jobs:
   test:
