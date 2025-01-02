@@ -29,7 +29,7 @@ jobs:
           echo "Содержимое директории: $(ls -la)"
           if [ -d "pw_pets" ]; then
             echo "Директория pw_pets существует."
-            cd pw_pets
+            cd pw_pets/pw_pets  # Переход в поддиректорию pw_pets
             python -m pip install --upgrade pip
             pip install -r requirements.txt
           else
@@ -53,13 +53,13 @@ jobs:
       # Шаг 6: Переход в директорию и запуск тестов с генерацией Allure отчетов
       - name: Run Pytest and generate Allure reports
         run: |
-          cd pw_pets
+          cd pw_pets/pw_pets  # Переход в поддиректорию pw_pets
           pytest --alluredir=allure-results -n auto
 
       # Шаг 7: Генерация Allure отчета
       - name: Generate Allure Report
         run: |
-          cd pw_pets
+          cd pw_pets/pw_pets  # Переход в поддиректорию pw_pets
           allure generate allure-results --clean -o allure-report
 
       # Шаг 8: Публикация Allure отчета как артефакта
@@ -67,4 +67,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Allure Report
-          path: pw_pets/allure-report
+          path: pw_pets/pw_pets/allure-report
