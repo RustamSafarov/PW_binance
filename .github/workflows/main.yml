@@ -22,12 +22,20 @@ jobs:
         with:
           python-version: '3.8'
 
-      # Шаг 3: Переход в директорию с requirements.txt и установка зависимостей
+      # Шаг 3: Проверка наличия директории и установка зависимостей
       - name: Install dependencies
         run: |
-          cd pw_pets
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          echo "Текущая директория: $(pwd)"
+          echo "Содержимое директории: $(ls -la)"
+          if [ -d "pw_pets" ]; then
+            echo "Директория pw_pets существует."
+            cd pw_pets
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+          else
+            echo "Директория pw_pets не найдена."
+            exit 1
+          fi
 
       # Шаг 4: Установка Java (необходим для Allure)
       - name: Set up Java 11
@@ -59,4 +67,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Allure Report
-          path: ./allure-report
+          path: pw_pets/allure-report
