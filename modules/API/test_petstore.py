@@ -5,6 +5,8 @@ from config import USERNAME, PASSWORD
 from pw_pets.modules.API.meths import PetstoreClient
 import uuid
 
+
+
 @pytest.mark.smoke
 @pytest.mark.api
 def test_add_and_get_pet(petstore_client):

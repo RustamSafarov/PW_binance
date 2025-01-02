@@ -1,5 +1,5 @@
 import requests
-from pw_pets.config import API_KEY
+from config import API_KEY
 
 class Authorization:
     BASE_URL = "https://petstore.swagger.io/v2"

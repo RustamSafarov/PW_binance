@@ -1,6 +1,10 @@
 import pytest
+<<<<<<< HEAD
 from config import Authorization, API_KEY, USERNAME, PASSWORD
 
+=======
+from pw_pets.config import Authorization, API_KEY, USERNAME, PASSWORD
+>>>>>>> 6690f4a6bc6e061597592f8c1b5295ebc381a1d2
 
 @pytest.fixture(scope="session")
 def auth_client():
@@ -19,4 +23,9 @@ def auth_client():
 def petstore_client(auth_client):
     """
     Фикстура для клиента Petstore, использующая авторизованный клиент.
+<<<<<<< HEAD
     """
+=======
+    """
+    return auth_client  # В данном случае Authorization тоже выполняет роль клиента API
+>>>>>>> 6690f4a6bc6e061597592f8c1b5295ebc381a1d2
