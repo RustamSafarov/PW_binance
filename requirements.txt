@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 playwright
 pytest-playwright
 pytest
@@ -9,16 +8,3 @@ black
 pytest-xdist
 pytest-rerunfailures
 python-dotenv
-=======
-playwright
-pytest-playwright
-pytest
-allure-pytest
-allure-python-commons
-flake8
-black
-pytest-xdist
-pytest-rerunfailures
-python-dotenv
->>>>>>> 722a1c2e040ca93c033ace5debc6177c3c44ec5a
-requests
