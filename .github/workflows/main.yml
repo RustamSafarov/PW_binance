@@ -25,9 +25,7 @@ jobs:
       # Шаг 3: Установка зависимостей
       - name: Install dependencies
         run: |
-          echo "Текущая директория: $(pwd)"
-          echo "Содержимое директории: $(ls -la)"
-          cd pw_pets  # Переход в директорию с requirements.txt
+          cd pw_pets
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
