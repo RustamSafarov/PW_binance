@@ -21,4 +21,4 @@ def petstore_client(auth_client):
     Фикстура для клиента Petstore, использующая авторизованный клиент.
     """
     return auth_client  # В данном случае Authorization тоже выполняет роль клиента API
->>>>>>> 6690f4a6bc6e061597592f8c1b5295ebc381a1d2
+
