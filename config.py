@@ -1,5 +1,14 @@
+import os
+from dotenv import load_dotenv
 import requests
-from pw_pets.config import API_KEY
+
+# Загружаем переменные окружения из файла .env
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+USERNAME = os.getenv("AUTH_USERNAME")
+PASSWORD = os.getenv("AUTH_PASSWORD")
+ROLE = os.getenv("ROLE")
 
 class Authorization:
     BASE_URL = "https://petstore.swagger.io/v2"
@@ -34,4 +43,4 @@ class Authorization:
         """
         url = f"{self.BASE_URL}/user/logout"
         response = requests.get(url, headers=self._get_headers())
-        return response.status_code 
+        return response.status_code
